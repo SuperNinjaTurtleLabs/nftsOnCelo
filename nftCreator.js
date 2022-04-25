@@ -1,6 +1,7 @@
 const hre = require("hardhat");
+require('dotenv').config();
 
-let localContractAddress = "0x5FbDB2315678afecb367f032d93F642f64180aa3";
+let localContractAddress = process.env.ALFAJORES_CONTRACT;
 
 async function createNFT(data) {
     const HelloNft = await hre.ethers.getContractFactory("HelloNft");

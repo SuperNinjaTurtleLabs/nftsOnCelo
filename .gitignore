@@ -4,6 +4,7 @@ coverage
 coverage.json
 typechain
 secrets.json
+deployments/
 
 #Hardhat files
 cache
