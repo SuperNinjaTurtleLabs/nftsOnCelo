@@ -12,7 +12,6 @@ const uploadDir = "uploads";
 
 app.use(bp.json())
 app.use(bp.urlencoded({ extended: true }))
-app.use(fileUpload());
 
 const ipfs = ipfsAPI('ipfs.infura.io', '5001', { protocol: 'https' })
 
