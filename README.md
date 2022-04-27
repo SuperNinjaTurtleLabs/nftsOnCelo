@@ -1,7 +1,12 @@
 # NftCreator
 This is the repo to create NFTs on EVM compatible blockchains (able to run solidity code).
 
-# how to run 
+# how to run on cloud
+1. clone the code in your system.
+2. Install all the dependencies by running : npm install
+3. Run the server by connecting ro Rinkeby network by running npx hardhat run --network rink app.js
+
+# how to run on local system
 1. clone the code in your system.
 2. Install all the dependencies by running : `npm install`
 3. start a local blockchain by running `npx hardhat node`
