@@ -1,5 +1,5 @@
 const express = require('express');
-const bp = require('body-parser')
+//const bp = require('body-parser')
 const nftHandler = require('./nftCreator');
 const fileUpload = require('express-fileupload');
 const fs = require('fs');
@@ -10,8 +10,9 @@ const app = express();
 const port = 3000;
 const uploadDir = "uploads";
 
-app.use(bp.json())
-app.use(bp.urlencoded({ extended: true }))
+app.use(express.json())
+app.use(express.urlencoded({ extended: true }))
+app.use(fileUpload());
 
 const ipfs = ipfsAPI('ipfs.infura.io', '5001', { protocol: 'https' })
 
