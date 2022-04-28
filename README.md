@@ -25,30 +25,29 @@ Now, you nodeJs server is running at port 3000.
 # making REST request to createNFTs to the server
 1. Curl to create a NFT token
 ```
-curl --location --request POST 'localhost:3000/createNft' \
---header 'Content-Type: application/json' \
---form 'file=@"/Users/vg/Documents/nft images/1.jpeg"' \
---form 'mintTo="0xb8FAAB1f7f19E7021A8736777d7D0d75b7bdFcbc"' \
---form 'name="cool dude"' \
---form 'description="a cool new nft token"'
+curl --location --request POST 'http://api.nftoncelo.com/createNft' \
+--form 'file=@"/Users/vg/Downloads/beautiful-mehndi.jpeg"' \
+--form 'mintTo="0x0fe7103cBaB645095B68E6f415cB46d6e0d82C97"' \
+--form 'name="Mehndi"' \
+--form 'description="day 2 "'
 ```
-if you wish then you can update the `mintoTo` and `tokenUri` values.
+Note: update the file location to the file on your system
 
 2. curl to query the owner of a token Id
 ```
-curl --location --request POST 'localhost:3000/ownerOf' \
+curl --location --request POST 'http://api.nftoncelo.com/ownerOf' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-    "tokenId" : 1
+    "tokenId" : 13
 }'
 ```
 
 3. curl to get the URI of the token
 ```
-curl --location --request POST 'localhost:3000/tokenURI' \
+curl --location --request POST 'http://api.nftoncelo.com/tokenURI' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-    "tokenId" : 1
+    "tokenId" : 13
 }'
 ```
 
